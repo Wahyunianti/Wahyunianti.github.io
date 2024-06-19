@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <title>Document</title>
     <link
       href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,600,700"
@@ -18,7 +19,6 @@
     <link rel="stylesheet" href="css/style.css" />
     <script src="https://www.gstatic.com/firebasejs/9.11.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.11.0/firebase-database.js"></script>
-  
   </head>
   <body>
     <div class="sesi">
@@ -142,42 +142,8 @@
     <button class="floating-button" id="audioButton"><i class="fas fa-play"></i></button>
             
 </div>
-    <script>
-    
-const targetDate = new Date('2024-06-27T00:00:00').getTime();
 
-// Update the count down every 1 second
-const timer = setInterval(function() {
-    // Get current date and time
-    const now = new Date().getTime();
-
-    // Calculate the distance between now and the target date
-    const distance = targetDate - now;
-
-    // Time calculations for days, hours, minutes, and seconds
-    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-    // Display the result in the elements with corresponding IDs
-    document.getElementById('days').innerHTML = days.toString().padStart(2, '0');
-    document.getElementById('hours').innerHTML = hours.toString().padStart(2, '0');
-    document.getElementById('minutes').innerHTML = minutes.toString().padStart(2, '0');
-    document.getElementById('seconds').innerHTML = seconds.toString().padStart(2, '0');
-
-    // If the countdown is finished, clearInterval
-    if (distance < 0) {
-        clearInterval(timer);
-        document.getElementById('days').innerHTML = '00';
-        document.getElementById('hours').innerHTML = '00';
-        document.getElementById('minutes').innerHTML = '00';
-        document.getElementById('seconds').innerHTML = '00';
-    }
-}, 1000); // Update every 1 second (1000 milliseconds)
-
-    </script>
-    <script>    
+<script>
 function displayMessages() {
     const messageContainer = document.getElementById('messageContainer');
     messageContainer.innerHTML = ''; // Bersihkan kontainer sebelum menambahkan pesan baru
@@ -189,9 +155,9 @@ function displayMessages() {
     });
 }
 
-document.getElementById('messageForm').addEventListener('submit', function(event) {
+document.getElementById('ucapanForm').addEventListener('submit', function(event) {
     event.preventDefault(); // Mencegah pengiriman form
-    const wishInput = document.getElementById('wishInput');
+    const wishInput = document.getElementById('wish');
     const newWish = wishInput.value.trim();
     if (newWish !== '') {
         const messages = JSON.parse(localStorage.getItem('messages')) || [];
@@ -212,11 +178,13 @@ function addMessageToDOM(message) {
 
 // Tampilkan pesan yang sudah ada saat halaman dimuat
 window.onload = displayMessages;
+
 </script>
 
-    <script> const audioPlayer = document.getElementById('audioPlayer');
+<script>
+const audioPlayer = document.getElementById('audioPlayer');
     const audioButton = document.getElementById('audioButton');
-    audioPlayer.play();
+    
     audioButton.addEventListener('click', function() {
         const icon = audioButton.querySelector('i');
         if (audioPlayer.paused) {
@@ -230,6 +198,37 @@ window.onload = displayMessages;
         }
     });</script>
 
-    <script src="js/script.js"></script>
+    <script>
+        const targetDate = new Date('2024-06-27T00:00:00').getTime();
+        
+        // Update the count down every 1 second
+        const timer = setInterval(function() {
+            // Get current date and time
+            const now = new Date().getTime();
+        
+            // Calculate the distance between now and the target date
+            const distance = targetDate - now;
+        
+            // Time calculations for days, hours, minutes, and seconds
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        
+            // Display the result in the elements with corresponding IDs
+            document.getElementById('days').innerHTML = days.toString().padStart(2, '0');
+            document.getElementById('hours').innerHTML = hours.toString().padStart(2, '0');
+            document.getElementById('minutes').innerHTML = minutes.toString().padStart(2, '0');
+            document.getElementById('seconds').innerHTML = seconds.toString().padStart(2, '0');
+        
+            // If the countdown is finished, clearInterval
+            if (distance < 0) {
+                clearInterval(timer);
+                document.getElementById('days').innerHTML = '00';
+                document.getElementById('hours').innerHTML = '00';
+                document.getElementById('minutes').innerHTML = '00';
+                document.getElementById('seconds').innerHTML = '00';
+            }
+        }, 1000); // Update every 1 second (1000 milliseconds)</script>
   </body>
 </html>
