@@ -202,7 +202,7 @@ const firebaseConfig = {
 
     <script> const audioPlayer = document.getElementById('audioPlayer');
     const audioButton = document.getElementById('audioButton');
-    
+    audioPlayer.play();
     audioButton.addEventListener('click', function() {
         const icon = audioButton.querySelector('i');
         if (audioPlayer.paused) {
