@@ -49,7 +49,7 @@ p {
     display: flex;
     flex-direction: column;
     padding-bottom: 10rem;
-    padding-top: 10rem;
+    padding-top: 8rem;
 
 }
 .relate {
@@ -88,19 +88,32 @@ a {
     width: 300px;
     height: min-content;
     position: relative;
-
+    transform: rotate(10deg);
 }
 
-.intro {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    gap: 3rem;
-    padding-inline: 5rem;
-    padding-top: 8rem;
-    align-items: center;
-}
+@keyframes goyang {
+    0% { transform: rotate(10deg); }
+    50% { transform: rotate(-10deg); }
+    100% { transform: rotate(10deg); }
+  }
+
+
+  
+  .lampu {
+    animation: goyang 2s infinite;
+    transform-origin: top center; /* Titik putar di bagian atas gambar */
+  }
+
+    .intro {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        gap: 3rem;
+        padding-inline: 5rem;
+        padding-top: 8rem;
+        align-items: center;
+    }
 
 .image {
     width: 50%;
@@ -115,11 +128,27 @@ a {
     width: 400px;
 }
 
+
+
 .daun {
     position: absolute;
     width: 450px;
     margin-top: 18rem;
     margin-right: 15rem;
+    transform: rotate(5deg); 
+
+}
+
+@keyframes daun {
+    0% { transform: rotate(5deg); }
+    50% { transform: rotate(-5deg); }
+    100% { transform: rotate(5deg); }
+  }
+
+.daun {
+    animation: daun 6s infinite;
+    transform-origin: bottom center; /* Titik putar di bagian atas gambar */
+
 }
 
 .perkenalan {
