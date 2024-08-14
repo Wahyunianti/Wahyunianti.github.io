@@ -47,7 +47,7 @@ p {
     height: 100vh;
     display: flex;
     flex-direction: column;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 .tudung {
@@ -117,7 +117,7 @@ a {
     height: 100vh;
     display: flex;
     flex-direction: column;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 .tudung2 {
@@ -182,7 +182,7 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 .kolom {
@@ -224,7 +224,7 @@ a {
     display: flex;
     flex-direction: row;
     padding: 10rem;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 .nama{
     width: 50%;
