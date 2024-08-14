@@ -1,0 +1,351 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgb(255, 247, 240);
+    background-image: url('img/pattern.png');
+    background-repeat: repeat;
+    background-size: 400px;
+}
+
+h1, h2, h3, h4 {
+    font-family: "Overpass", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 14px;
+    font-style: normal;
+}
+
+h1 {
+    font-size: 50px !important;
+}
+
+h2 {
+    font-size: 60px !important;
+}
+
+.indek {
+    font-size: 30px !important;
+}
+
+p {
+    font-family: "Caveat", cursive;
+    font-optical-sizing: auto;
+    font-size: 18px !important;
+    font-style: normal;
+}
+
+.awal {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.tudung {
+    position: absolute;
+    width: 100%;
+    background-image: url('img/8.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center top;
+    height: 500px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+a {
+    text-decoration: none;
+}
+
+.tudung a{
+    color: white;
+    padding-top: 3rem;
+}
+
+.lampu {
+    width: 300px;
+    height: min-content;
+    position: relative;
+
+}
+
+.intro {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+    padding-inline: 5rem;
+    padding-top: 8rem;
+    align-items: center;
+}
+
+.image {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.foto {
+    width: 400px;
+}
+
+.daun {
+    position: absolute;
+    width: 450px;
+    margin-top: 18rem;
+    margin-right: 15rem;
+}
+
+.perkenalan {
+    width: 50%;
+}
+
+.kedua {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.tudung2 {
+    position: absolute;
+    width: 100%;
+    background-image: url('img/3.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.skilll{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.skilll h1{
+    position: absolute;
+    margin-top: 5rem;
+}
+.ctn-skill{
+    width: 100%;
+    height: 100%;
+    padding-inline: 15rem;
+    display: flex;
+    flex-direction: row;
+    gap: 8rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.ctn{
+    display: inline-block;
+    position: relative;
+    align-items: center;
+}
+
+.ctn img{
+    transition: transform 0.3s ease;
+    width: 200px;
+}
+.ctn p {
+    margin: 0;
+    transition: transform 0.3s ease;
+    font-size: 24px !important;
+    text-align: center;
+    padding-top: 2rem;
+}
+
+.ctn:hover img,
+.ctn:hover p {
+    transform: scale(1.1);
+}
+
+.ketiga {
+    height: min-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.kolom {
+    width: 100%;
+    padding: 5rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 5rem;
+}
+
+.kotak {
+    height: 300px;
+    width: 400px;
+    display: block;
+    position: relative;
+}
+
+.kotak img {
+    height: 300px;
+    width: 400px;
+    border: solid;
+    border-width: 3px;
+    border-radius: 8px;
+    border-color: rgb(152, 93, 30);
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.3s ease;
+}
+
+.kotak:hover img{
+    transform: scale(1.1);
+}
+
+.keempat {
+    height: min-content;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 10rem;
+}
+.nama{
+    width: 50%;
+    padding-inline: 2rem;
+}
+.keterangan {
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+.embedede{
+    width: 100%;
+    border-radius: 20px;
+}
+.embedede iframe {
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Media Query */
+@media screen and (max-width: 1260px) {
+
+    .ctn-skill {
+        flex-direction: column;
+        gap: 0.5rem;
+        margin-top: 3rem;
+
+    }
+
+    .ctn img {
+        width: 180px;
+    }
+
+    .ctn p {
+        margin-top: -20px;
+    }
+
+    .foto {
+        width: 300px;
+    }
+
+    .daun {
+        width: 330px;
+    }
+
+    .kolom {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: center;
+    }
+
+}
+
+@media screen and (max-width: 865px) {
+    .lampu {
+        width: 200px;
+    }
+
+    .intro {
+        padding-top: 14rem;
+        flex-direction: column;
+        padding-inline: 2rem;
+        gap: 10rem;
+    }
+
+    .image {
+        width: 100%;
+    }
+
+    .foto {
+        width: 290px;
+    }
+
+    .daun {
+        width: 320px;
+        margin-right: 10rem;
+        margin-top: 10rem;
+    }
+
+    .perkenalan {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .perkenalan p,
+    h1 {
+        text-align: center;
+    }
+
+    .keempat {
+        flex-direction: column;
+        padding: 2rem;
+        gap: 4rem;
+
+    }
+
+    .nama {
+        width: 100%;
+        margin-top: 20px;
+        padding-inline: 0;
+    }
+    .tudung a{
+        padding-top: 15px !important;
+    }
+    .tudung a h2{
+        padding-top: 0px !important;
+        font-size: 32px !important;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .intro {
+        padding-top: 12rem;
+        gap: 5rem;
+    }
+    .ctn img {
+        width: 150px;
+    }
+    .daun {
+        width: 280px;
+    }
+}
+
+
