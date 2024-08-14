@@ -15,7 +15,7 @@ body {
     background-image: url('./pattern.png');
     background-repeat: repeat;
     background-size: 400px;
-    overflow-x: hidden;
+
 }
 
 h1, h2, h3, h4 {
