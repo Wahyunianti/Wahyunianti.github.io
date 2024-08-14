@@ -148,7 +148,7 @@ a {
     padding-inline: 15rem;
     display: flex;
     flex-direction: row;
-    gap: 8rem;
+    gap: 5rem;
     align-items: center;
     justify-content: center;
 }
