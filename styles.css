@@ -321,6 +321,9 @@ a {
         gap: 4rem;
 
     }
+    .ctn-skill{
+        padding-inline: 0;
+    }
 
     .nama {
         width: 100%;
