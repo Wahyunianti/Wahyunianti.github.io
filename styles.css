@@ -12,7 +12,7 @@ body {
     flex-direction: column;
     justify-content: center;
     background-color: rgb(255, 247, 240);
-    background-image: url('./pattern.png');
+    background-image: url('pattern.png');
     background-repeat: repeat;
     background-size: 400px;
 }
@@ -44,19 +44,33 @@ p {
 }
 
 .awal {
-    height: 100vh;
+    position: relative;
+    height: max-content;
     display: flex;
     flex-direction: column;
+    padding-bottom: 10rem;
+    padding-top: 10rem;
+
+}
+.relate {
+    position: sticky;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    right: 0;
 }
 
 .tudung {
     position: absolute;
-    width: 100%;
-    background-image: url('./8.png');
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    background-image: url('8.png');
     background-repeat: no-repeat;
     background-size: contain;
-    background-position: center top;
-    height: 500px;
+    background-position-x: center;
+    height: 100vh;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -116,12 +130,14 @@ a {
     height: 100vh;
     display: flex;
     flex-direction: column;
+    padding-top: 10rem;
+
 }
 
 .tudung2 {
     position: absolute;
     width: 100%;
-    background-image: url('./3.png');
+    background-image: url('3.png');
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -142,12 +158,12 @@ a {
     margin-top: 5rem;
 }
 .ctn-skill{
-    width: 100%;
+    width: 100vw;
     height: 100%;
     padding-inline: 15rem;
     display: flex;
     flex-direction: row;
-    gap: 5rem;
+    gap: 8rem;
     align-items: center;
     justify-content: center;
 }
@@ -180,6 +196,8 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-top: 10rem;
+
 }
 
 .kolom {
@@ -188,20 +206,18 @@ a {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     gap: 5rem;
 }
 
 .kotak {
-    height: 300px;
-    width: 400px;
     display: block;
     position: relative;
 }
 
 .kotak img {
     height: 300px;
-    width: 400px;
+    width: 300px;
     border: solid;
     border-width: 3px;
     border-radius: 8px;
@@ -320,8 +336,8 @@ a {
         gap: 4rem;
 
     }
-    .ctn-skill{
-        padding-inline: 0;
+    .awal {
+        padding-top: 5rem !important;
     }
 
     .nama {
@@ -343,12 +359,27 @@ a {
         padding-top: 12rem;
         gap: 5rem;
     }
+    .ctn-skill{
+        padding-inline: 0;
+    }
     .ctn img {
         width: 150px;
     }
     .daun {
         width: 280px;
     }
+    h2{
+        font-size: 32px !important;
+    }
+    span img{
+        width: 60px !important;
+    }
+    .kolom {
+        width: 100%;
+    justify-content: center;
+
+    }
+
 }
 
 
