@@ -65,12 +65,12 @@ p {
     top: 0;
     left: 0;
     right: 0;
-    width: max-content;
+    width: 100vw;
     background-image: url('8.png');
     background-repeat: no-repeat;
     background-size: contain;
     background-position-x: center;
-    height: 100vh;
+    height: max-content;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
