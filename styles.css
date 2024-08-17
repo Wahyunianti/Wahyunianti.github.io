@@ -70,8 +70,6 @@ p {
     background-repeat: no-repeat;
     background-size: contain;
     background-position-x: center;
-    min-height : max-content;
-    max-height : 100vh;
     height: 100vh;
     display: flex;
     flex-direction: row;
