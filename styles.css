@@ -70,7 +70,9 @@ p {
     background-repeat: no-repeat;
     background-size: contain;
     background-position-x: center;
-    height: min-content;
+    min-height : max-content;
+    max-height : 100vh;
+    height: max-content;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
