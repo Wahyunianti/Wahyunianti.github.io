@@ -384,6 +384,9 @@ a {
 }
 
 @media screen and (max-width: 650px) {
+    .awal {
+        padding-top: 0rem !important;
+    }
     .intro {
         padding-top: 12rem;
         gap: 5rem;
@@ -408,6 +411,7 @@ a {
     justify-content: center;
 
     }
+    
 
 }
 
